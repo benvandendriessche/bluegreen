@@ -6,15 +6,15 @@ $white = imagecolorallocate($im, 255, 255, 255);
 $deployment = getenv("COLOR");
 
 if ( $deployment == 'blue') {
-  $color = imagecolorallocate($im, 0, 0, 255);
+  $color = imagecolorallocate($im, 0, 255, 255);
 } elseif ($deployment == 'green')  {
-  $color = imagecolorallocate($im, 0, 255, 0);
+  $color = imagecolorallocate($im, 255, 255, 123);
 } else {
-  $color = imagecolorallocate($im, 0, 0, 255);
+  $color = imagecolorallocate($im, 0, 143, 255);
 }
 
 // Draw a filled rectangle
-imagefilledrectangle($im, 0, 0, 199, 199, $color);
+imagefilledrectangle($im, 0, 0, 250, 199, $color);
 
 // Save the image
 header('Content-Type: image/png');
